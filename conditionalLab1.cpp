@@ -10,7 +10,8 @@
  * There are multiple conditions to write and the curly bracesd { and } to be structured.
  * 
  * Usage:
- * Enter two integer values and allow the program to run.
+ * Enter two integer values and allow the program to run. Please do not modify how the code is
+ * intended to run.
 \*********************************************************************************************************************/
 
 #include <iostream>
@@ -20,19 +21,22 @@ using namespace std;
 // Will not leave until an integer is entered
 int getValidatedInteger(const string& prompt) {
     int value;
-    while (true) {
+    while (true) 
+	{
         cout << prompt;
         cin >> value;
 
         // Check for bad cin
-        if () {
+        if (cin.fail()) 
+		{
             // Clear error flag
-            
+            cin.clear();
             // Discard invalid input
-            
+            cin.ignore(100, '\n');
             cout << "Invalid input. Please enter an integer.\n";
         }
-        else {
+        else 
+		{
             return value;
         }
     }
@@ -41,9 +45,9 @@ int getValidatedInteger(const string& prompt) {
 int main() {
     int num1 = getValidatedInteger("Enter the first integer: ");
     int num2 = getValidatedInteger("Enter the second integer: ");
-    int sum;
-    int diff;
-    int product;
+    int sum = num1 + num2;;
+    int diff = num1 - num2;;
+    int product = num1 * num2;
     int quotient;
     int remainder;
     
