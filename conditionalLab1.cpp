@@ -1,5 +1,5 @@
 /*********************************************************************************************************************\
- * @Author: Rich Zwolinski
+ * @Author: Mahf Hoque
  * @Project: One way and two way conditionals
  *
  * Description:
